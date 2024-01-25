@@ -4,9 +4,9 @@ def count_letters(main_str):
     letters_list = []
     main_str = main_str.lower()
     for symbol in main_str:
-        if symbol.isalpha() == True:
+        if symbol.isalpha():
             letters_list.append(symbol)
-    letters_dict = dict(Counter(letters_list))
+    letters_dict = Counter(letters_list)
     return(letters_dict)
 
 
@@ -61,3 +61,4 @@ letters_dict = count_letters(main_str)
 frec_dict = calculate_frequency(letters_dict)
 for key, value in frec_dict.items():
     print(f"{key}: {value:.2f}")
+

@@ -11,8 +11,7 @@ def task() -> None:
     data = []
     with open(INPUT_FILENAME) as input_f:
         reader = csv.DictReader(input_f)
-        for row in reader:
-            data.append(row)
+        data = [row for row in reader]
         # TODO считать содержимое csv файла
 
       # TODO Сериализовать в файл с отступами равными 4
@@ -27,3 +26,4 @@ if __name__ == '__main__':
     with open(OUTPUT_FILENAME) as output_f:
         for line in output_f:
             print(line, end="")
+
